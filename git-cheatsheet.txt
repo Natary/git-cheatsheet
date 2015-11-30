@@ -1,8 +1,3 @@
-++++ 
-cd /Users/n/Documents/git/master1
-cd /Users/n/Documents/git/git-cheatsheet
-++++ 
-
 #+++++ everything not prefixed with # or send <[]> is a code
 # if stuck in git:
 :x 	# write and quit
@@ -41,7 +36,7 @@ git reset HEAD [file]
 
 ###################### commit
 git commit git-cheatsheet.txt
-# i # for insert
+send <i> # for insert
 # type comments - git message body <= 72 char
 send <Esc>
 send <shift+:>
@@ -67,10 +62,17 @@ git log -p
 #1. from gitHub - add New
 #2. Using GitHub API https://developer.github.com/v3/repos/
 
-# connect to github repository
-git remote add origin //github.com/Natary/git-cheatsheet.git
-# upload stuff (HEAD - for current branch)
-git push origin HEAD
+#view current remotes:
+git remote -v
+
+# add remote github repository
+git remote add origin https://github.com/Natary/git-cheatsheet.git
+
+# delete remote github repository [origin, destination]
+git remote rm origin
+
+# upload stuff (HEAD - for current branch) -u: upstream
+git push -u origin master
 
 # add file on github.com
 
