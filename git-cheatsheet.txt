@@ -80,18 +80,6 @@ git push -u origin master
 git pull origin master
 
 # added new branch locally:
-git checkout -b moose
-git push origin HEAD # push current branch moose to github
-
-Username for 'https://github.com': Natary
-Password for 'https://Natary@github.com': 
-
-===========================================
-
-
-
-
-
-
-
+git checkout -b testBranch
+git push origin HEAD # push current branch testBranch to github
 
