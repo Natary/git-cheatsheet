@@ -1,0 +1,180 @@
+++++ 
+cd /Users/n/Documents/git/master1
+cd /Users/n/Documents/git/git-cheatsheet
+++++ 
+
+#everything not prefixed with # is a code
+# if stuck in git:
+:x 	# write and quit
+:q 	# quit
+
+### git install 
+git
+git version
+
+##if not installed: install git (https://[windows, mac].github.com)
+
+### get config info:
+git config 	 # view all options
+git config —list # lists available config info
+
+# configure user info if needed: user.name is just one option
+git config --global user.name “[user]”
+git config --global user.email “[email]”
+
+### Setup directory as git repository
+## check if directory is a repository: if it includes .git (hidden file)
+cd [directory]
+# include directory entities with name beginning with (.)
+ls -a 
+
+## make directory a repository 
+# Initializes new local empty Git repository in [directory]/.git/
+git init
+
+# add files to local repository (before committing)
+git add git-cheatsheet.txt # puts file into staging area
+git add . # adds all files in directory to staging area (only files with changes)
+
+# commit
+git commit git-cheatsheet.txt
+i # for insert
+type comments - git message body <= 72 char
+Esc
+shift+:
+wq # for wright(save) and quit
+#OR
+x #  wright to disk and quit
+
+### short-hand: 
+# but this is not a good practice, does not allow to create a body of message
+git commit -m "Comment"
+
+===========================================
+
+
+COMMIT
+commit - difference in 1 file, making a copy a production
+
+git is repointing branch tags  - (->performance)
+
+BRANCHING
+repository creates  Master Branch
+
+
+before 
+git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	index.html
+
+
+----- set up folder as git repository : git init
+ls
+test1.html
+vitarka:master1 n$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+vitarka:master1 n$ git init
+Initialized new local empty Git repository in /Users/n/Documents/git/master1/.git/
+
+--- add
+git add index.html # puts file into staging area
+git add . # adds all files in directory to staging area (only files with changes)
+
+-- commit
+git commit index.html
+i # for insert
+type comments - git message body <= 72 char
+Esc
+shift+:
+wq # for wright(save) and quit
+#OR
+x #  wright to disk and quit
+
+### short-hand: 
+# but this is not a good practice, does not allow to create a body of message
+git commit -m "Comment"
+
+---- after commit:
+vitarka:master1 n$ git commit index.html
+[master (root-commit) 7376140] this is my first commit
+
+# git created hash and this is the address of the first
+
+2 files changed, 1 insertion(+), 1 deletion(-) # git operates line by line 
+# see changes at line level:
+git log -p
+
+------ create branch (logical - does not create dir)
+git checkout -b exciting
+
+--- merge branches
+git merge [branch name]
+
+-- show branches:
+git branch
+
+
+
+
+-- conflict:
+<<<<<<< HEAD  ### master
+Hi Everybody
+test3     
+=======  ### another conflicting branch:
+test1   
+import all
+test2        
+      
+new feature
+>>>>>>> exciting
+
+
+git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   index.html
+
+
+
+----- Commands
+# history of changes
+git log # changes to the CURRENT branch
+
+git diff # show changes that has not been staged
+
+--------- load from/upload to github
+# connect to github repository
+git remote add origin //github.com/Natary/myPhython
+# upload stuff (HEAD - for current branch)
+git push origin HEAD
+
+# add file on github.com
+
+# load new changes:
+git pull origin master
+
+# added new branch locally:
+git checkout -b moose
+git push origin HEAD # push current branch moose to github
+
+Username for 'https://github.com': Natary
+Password for 'https://Natary@github.com': 
+
+cntr-z - force quit
+
+
+
+
+
+
