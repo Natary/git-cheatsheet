@@ -38,15 +38,15 @@ git add . # adds all files in directory to staging area (only files with changes
 
 # commit
 git commit git-cheatsheet.txt
-i # for insert
-type comments - git message body <= 72 char
-Esc
-shift+:
+# i # for insert
+# type comments - git message body <= 72 char
+send <Esc>
+send <shift+:>
 wq # for wright(save) and quit
 #OR
 x #  wright to disk and quit
 
-### short-hand: 
+# commit short-hand: 
 # but this is not a good practice, does not allow to create a body of message
 git commit -m "Comment"
 
