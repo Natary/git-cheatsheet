@@ -65,7 +65,8 @@ git log -p
 #view current remotes:
 git remote -v
 
-# add remote github repository
+# add remote github repository. 
+# make sure to use correct protocol (https recommended), otherwise, i believe additional config stuff is needed
 git remote add origin https://github.com/Natary/git-cheatsheet.git
 
 # delete remote github repository [origin, destination]
