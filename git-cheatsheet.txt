@@ -84,3 +84,14 @@ git pull origin master
 git checkout -b testBranch
 git push origin HEAD # push current branch testBranch to github
 
+# shorthand for staging new/changed files for commit (with message): 
+# NB: :q! to get out of editor
+$ git status
+$ git add viz/map_app.py
+#OR to stage all
+$ git add .
+$ git commit -m 'modified mandatoty columns and doc_sql'
+$ git push
+# OR
+git push origin master
+
